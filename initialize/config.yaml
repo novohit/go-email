@@ -1,0 +1,38 @@
+name: "go-email"
+mode: "release"
+host: localhost
+port: 8088
+version: "v0.0.1"
+snowflake:
+  start_time: "2023-01-01"
+  machine_id: 1
+
+auth:
+  jwt_expired:
+  secret: "hello"
+
+email:
+  host: "smtp.163.com"
+  username: "zwx_info@163.com"
+  password: "YKSKCZQCFIPWREFS"
+
+log:
+  model: "dev"
+  level: "info"
+  filename: "app.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: email_mysql
+  port: 3306
+  username: root
+  password: root
+  database: "go-email"
+
+redis:
+  host: email_redis
+  port: 6379
+  password: redis
+  database: 5
